@@ -9,13 +9,23 @@ import pl.codegood.play9.services.ScoreService;
 
 import java.net.URI;
 import java.time.LocalDateTime;
+import java.util.List;
 
 @RestController
 @RequiredArgsConstructor
 @RequestMapping("/api/score")
 public class ScoreController {
 
+    private static final int FIRST_PAGE = 0;
+
     private final ScoreService scoreService;
+
+    @GetMapping("/best")
+    public ResponseEntity<List<Score>> getBestScores(@RequestParam(required = false) Integer page) {
+        int pageNumber = page != null ? page : FIRST_PAGE;
+        List<Score> bestScores = scoreService.getBestScores(pageNumber);
+        return ResponseEntity.ok(bestScores);
+    }
 
     @GetMapping("/{id}")
     public ResponseEntity<Score> getScore(@PathVariable(name = "id") Long id) {
