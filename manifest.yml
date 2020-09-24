@@ -1,0 +1,16 @@
+applications:
+  - name: play9-be
+    disk_quota: 1G
+    instances: 1
+    memory: 1G
+    path: target/play9-0.0.1-SNAPSHOT.jar
+    timeout: 120
+    routes:
+      - route: play9-be.cfapps.io
+    buildpacks:
+      - https://github.com/cloudfoundry/java-buildpack.git
+    stack: cflinuxfs3
+    services:
+      - play9-db
+    env:
+      JBP_CONFIG_OPEN_JDK_JRE: '{jre: { version: 11.0.0_+ }}'
