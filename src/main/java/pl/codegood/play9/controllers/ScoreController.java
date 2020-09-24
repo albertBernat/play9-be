@@ -16,6 +16,7 @@ import java.util.stream.Collectors;
 @RestController
 @RequiredArgsConstructor
 @RequestMapping("/api/scores")
+@CrossOrigin
 public class ScoreController {
 
     private static final int FIRST_PAGE = 0;
