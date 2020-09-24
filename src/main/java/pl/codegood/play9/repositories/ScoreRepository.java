@@ -4,7 +4,7 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
-import pl.codegood.play9.entities.Score;
+import pl.codegood.play9.model.Score;
 
 import java.util.List;
 

@@ -1,4 +1,4 @@
-package pl.codegood.play9.entities;
+package pl.codegood.play9.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

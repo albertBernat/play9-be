@@ -4,7 +4,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
-import pl.codegood.play9.entities.Score;
+import pl.codegood.play9.model.Score;
 import pl.codegood.play9.repositories.ScoreRepository;
 
 import java.util.List;
